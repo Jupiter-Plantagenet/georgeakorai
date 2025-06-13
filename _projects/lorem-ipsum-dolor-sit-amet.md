@@ -1,7 +1,7 @@
 ---
 title: Lorem ipsum dolor sit amet,
 date: 2025-06-12T22:37:00.000Z
-image: https://unsplash.com/photos/glowing-shapes-with-multiple-eyes-in-darkness-r3r4R2GpRNs
+image: /images/uploads/filip-kvasnak-thfbfl1jti8-unsplash.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
   bibendum euismod massa, et sodales odio feugiat eu. Aliquam non urna iaculis,
   dignissim massa sit amet, vestibulum nisl. Nam rhoncus non nisl ac iaculis.

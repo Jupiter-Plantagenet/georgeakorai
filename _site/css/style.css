@@ -526,16 +526,35 @@ p {
   background: rgba(102, 126, 234, 0.9);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
+.portfolio-content {
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.portfolio-content h3,
 .portfolio-content p {
   text-align: center;
 }
+
+.portfolio-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+
 
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;

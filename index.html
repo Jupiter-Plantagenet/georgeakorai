@@ -113,6 +113,7 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
                     <img src="{{ project.image | relative_url }}" alt="{{ project.title }} Thumbnail">
                 </div>
                 <div class="portfolio-overlay">
+                  <div class="portfolio-content">
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.description }}</p>
                     <div class="portfolio-links">
@@ -127,6 +128,7 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
                         </a>
                         {% endif %}
                     </div>
+                  </div>
                 </div>
             </div>
             {% endfor %}
@@ -170,7 +172,7 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
             <div class="contact-info">
                 <h3>Let's Connect</h3>
                 <p>
-                    I'm currently available for freelance work and open to discussing new projects. Whether you have a question or just want to say hi, feel free to reach out.
+                    I'm currently available for freelance work and open to discussing new projects. Whether you have a question or just want to say hi, feel free to reach out through my social media below or through the contact form.
                 </p>
                 <div class="contact-details">
                     <div class="contact-item">
@@ -188,8 +190,10 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
                 </div>
             </div>
             <div class="contact-form">
-                <form action="https://formspree.io/f/xldnbvoa" method="POST">
+                <form id="contact-form" action="https://formspree.io/f/xldnbvoa" method="POST" autocomplete="off">
                     <input type="hidden" name="_subject" value="New Message from Your Portfolio Website" />
+                    <!-- Honeypot field for spam bots -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>
@@ -201,6 +205,38 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
+                <div id="form-status" style="margin-top:1rem;"></div>
+
+                <script>
+                // Contact form AJAX handler (no popups)
+                document.addEventListener('DOMContentLoaded', function() {
+                  var form = document.getElementById('contact-form');
+                  var statusDiv = document.getElementById('form-status');
+                  if (!form) return;
+                  form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    statusDiv.textContent = '';
+                    var formData = new FormData(form);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open(form.method, form.action);
+                    xhr.setRequestHeader('Accept', 'application/json');
+                    form.querySelector('button[type="submit"]').disabled = true;
+                    xhr.onreadystatechange = function() {
+                      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                      form.querySelector('button[type="submit"]').disabled = false;
+                      if (xhr.status === 200) {
+                        statusDiv.textContent = 'Thanks! I will get back to you shortly.';
+                        statusDiv.style.color = '#38a169'; // green
+                        form.reset();
+                      } else {
+                        statusDiv.textContent = 'Ouch! my apologies, there seems to be some issue. Please try my email address or linkedin and I will get back to you shortly';
+                        statusDiv.style.color = '#e53e3e'; // red
+                      }
+                    };
+                    xhr.send(formData);
+                  });
+                });
+                </script>
             </div>
         </div>
     </div>

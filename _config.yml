@@ -22,6 +22,7 @@ collections:
 
 # show posts with future dates
 future: true
+livereload: false
 
 # Exclude from processing
 exclude:

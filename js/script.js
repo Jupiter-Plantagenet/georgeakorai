@@ -138,17 +138,33 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                // Show success message in form-status div instead of alert
-                let statusDiv = document.getElementById('form-status');
-                if (statusDiv) {
-                    statusDiv.textContent = 'Thanks! I will get back to you shortly.';
-                    statusDiv.style.color = '#38a169'; // green
-                }
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
+            const statusDiv = document.getElementById('form-status');
+if (statusDiv) statusDiv.textContent = '';
+
+const formData = new FormData(this);
+const xhr = new XMLHttpRequest();
+xhr.open(this.method, this.action);
+xhr.setRequestHeader('Accept', 'application/json');
+submitBtn.disabled = true;
+
+xhr.onreadystatechange = () => {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+    if (xhr.status === 200) {
+        if (statusDiv) {
+            statusDiv.textContent = 'Thanks! I will get back to you shortly.';
+            statusDiv.style.color = '#38a169'; // green
+        }
+        this.reset();
+    } else {
+        if (statusDiv) {
+            statusDiv.textContent = 'Ouch! my apologies, there seems to be some issue. Please try my email address or linkedin and I will get back to you shortly.';
+            statusDiv.style.color = '#e53e3e'; // red
+        }
+    }
+};
+xhr.send(formData);
         });
     }
 

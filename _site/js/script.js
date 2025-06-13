@@ -139,7 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                alert('Thank you for your message! I will get back to you shortly.');
+                // Show success message in form-status div instead of alert
+                let statusDiv = document.getElementById('form-status');
+                if (statusDiv) {
+                    statusDiv.textContent = 'Thanks! I will get back to you shortly.';
+                    statusDiv.style.color = '#38a169'; // green
+                }
                 this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;

@@ -6,8 +6,8 @@
 title: George Akor - Portfolio & Blog
 description: >-
   Personal portfolio and blog of George Akor - Software Engineer, Graduate Researcher (AI, Smart Contracts).
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/georgeakorai"
+url: "https://jupiter-plantagenet.github.io"
 
 # Build settings
 markdown: kramdown

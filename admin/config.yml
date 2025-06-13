@@ -33,6 +33,11 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Category", name: "category", widget: "select", options: [
+            { label: "Machine Learning", value: "ml" },
+            { label: "Web Dev", value: "web" },
+            { label: "Smart Contracts", value: "sc" }
+        ] }
       - { label: "Demo URL", name: "demo_url", widget: "string", required: false }
       - { label: "GitHub URL", name: "github_url", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }

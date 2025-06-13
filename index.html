@@ -1,0 +1,239 @@
+---
+layout: default
+title: Home - George Akor
+description: "The personal portfolio and blog for George Akor, a Software Engineer and AI Researcher specializing in Machine Learning, Full-Stack Development, and Smart Contracts."
+---
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-container container">
+        <div class="hero-content">
+            <p class="hero-subtitle upper-subtitle">Software Engineer & <span class="highlight">AI Researcher</span></p>
+            <h1 class="hero-title main-title">George Akor</h1>
+            <p class="hero-description">
+                I build intelligent systems and web applications, specializing in Machine Learning, Full-Stack Development, and Smart Contracts. Welcome to my digital space where I showcase my work and share my thoughts.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="{{ '/George_Akor_Resume.pdf' | relative_url }}" class="btn btn-secondary" download>Download Resume</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">
+                <img src="{{ '/images/George_profile_pic.jpg' | relative_url }}" alt="George Akor" class="profile-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Hello! I'm George Akor, a passionate Software Engineer and Graduate Researcher with a focus on AI and Smart Contracts. My journey in technology has been driven by a deep curiosity for how we can build more intelligent, efficient, and secure systems.
+                </p>
+                <p>
+                    I specialize in Machine Learning, Full-Stack Web Development, and the emerging field of Smart Contract development. I love tackling complex problems, creating innovative solutions, and continuously learning. Feel free to explore my projects and get in touch!
+                </p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3 class="stat-number">3+</h3>
+                    <p class="stat-label">Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">10+</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Machine Learning</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Deep Learning</span>
+                    <span class="skill-item">NLP</span>
+                    <span class="skill-item">Computer Vision</span>
+                    <span class="skill-item">PyTorch</span>
+                    <span class="skill-item">TensorFlow</span>
+                    <span class="skill-item">Scikit-learn</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Full-Stack Web Development</h3>
+                <div class="skill-items">
+                    <span class="skill-item">HTML5 & CSS3</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">React</span>
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">Django</span>
+                    <span class="skill-item">SQL & NoSQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Smart Contract Development</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Solidity</span>
+                    <span class="skill-item">Ethereum</span>
+                    <span class="skill-item">Hardhat</span>
+                    <span class="skill-item">Web3.js</span>
+                    <span class="skill-item">Chainlink</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="sc">Smart Contracts</button>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-image">
+                    <img src="https://picsum.photos/seed/project1/400/300" alt="Project 1">
+                </div>
+                <div class="portfolio-overlay">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link" title="Live Demo">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        <a href="#" class="portfolio-link" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="portfolio-item" data-category="ml">
+                <div class="portfolio-image">
+                    <img src="https://picsum.photos/seed/project2/400/300" alt="Project 2">
+                </div>
+                <div class="portfolio-overlay">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link" title="Live Demo">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        <a href="#" class="portfolio-link" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="portfolio-item" data-category="sc">
+                <div class="portfolio-image">
+                    <img src="https://picsum.photos/seed/project3/400/300" alt="Project 3">
+                </div>
+                <div class="portfolio-overlay">
+                    <h3>Project Title 3</h3>
+                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link" title="Live Demo">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        <a href="#" class="portfolio-link" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more portfolio items as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog" id="blog">
+    <div class="container">
+        <h2 class="section-title">Recent Posts</h2>
+        <div class="blog-grid">
+            {% for post in site.posts limit:3 %}
+            <div class="portfolio-item blog-card" data-category="{{ post.category | downcase }}">
+                <div class="portfolio-image">
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }} Thumbnail">
+                </div>
+                <div class="portfolio-overlay">
+                    <div class="blog-card-text">
+                        <h3>{{ post.title }}</h3>
+                        <p class="blog-meta">Published on: {{ post.date | date: "%B %-d, %Y" }} | Category: {{ post.category }}</p>
+                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-small">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="blog-view-all-container">
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">View All Posts</a>
+        </div>
+    </div>
+</section>
+<!-- End Blog Section -->
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>
+                    I'm currently available for freelance work and open to discussing new projects. Whether you have a question or just want to say hi, feel free to reach out.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:georgejupiter303@gmail.com">georgejupiter303@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Jupiter-Plantagenet" target="_blank">github.com/Jupiter-Plantagenet</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/george-akor-65953819a" target="_blank">linkedin.com/in/george-akor</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xldnbvoa" method="POST">
+                    <input type="hidden" name="_subject" value="New Message from Your Portfolio Website" />
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

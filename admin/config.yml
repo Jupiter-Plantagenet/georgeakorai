@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: Jupiter-Plantagenet/georgeakorai # Replace with your repo path: username/repository-name
+  branch: master # Or master, or whichever is your main branch
+  # Optional: If your site is deployed on a subdirectory, uncomment and set path
+  # site_domain: yourdomain.com 
+
+media_folder: "images/uploads" # Path where images will be stored in the repo
+public_folder: "/images/uploads" # Path used in generated content (e.g., in markdown image links)
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts" # Or your preferred folder for blog markdown files
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" } # Assuming a layout for posts
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "George Akor" } # Default to your name
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

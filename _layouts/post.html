@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section class="blog-post-content" style="padding-top: 100px; padding-bottom: 50px;">
+    <div class="container">
+        <article>
+            <h1 class="section-title">{{ page.title }}</h1>
+            <p class="blog-meta" style="text-align:center; margin-top:-2rem; margin-bottom:2rem;">
+                Published on: {{ page.date | date: "%B %d, %Y" }} | Category: {{ page.categories | join: ", " }}
+            </p>
+            {% if page.image %}
+                <img src="{{ page.image }}" alt="{{ page.title }} Image" style="width:100%; max-width:800px; margin:0 auto 2rem auto; display:block; border-radius:8px;">
+            {% endif %}
+            
+            {{ content }}
+            
+            <div style="margin-top: 3rem;">
+                <a href="{{ '/blog.html' | relative_url }}" class="btn btn-secondary">Back to Blog</a>
+            </div>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local Ruby gems
+/vendor/bundle/
+.bundle/
+/Gemfile.lock
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+*.swp
+
+# Node modules
+node_modules/
+
+/examples

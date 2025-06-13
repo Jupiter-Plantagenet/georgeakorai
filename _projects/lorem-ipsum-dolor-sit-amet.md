@@ -1,7 +1,7 @@
 ---
 title: Lorem ipsum dolor sit amet,
 date: 2025-06-12T22:37:00.000Z
-image: /images/uploads/filip-kvasnak-thfbfl1jti8-unsplash.jpg
+image: /images/uploads/karsten-winegeart-ksesgtiblyi-unsplash.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
   bibendum euismod massa, et sodales odio feugiat eu. Aliquam non urna iaculis,
   dignissim massa sit amet, vestibulum nisl. Nam rhoncus non nisl ac iaculis.

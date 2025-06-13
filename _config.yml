@@ -15,6 +15,9 @@ theme: minima # Using a basic theme for now, can be customized
 plugins:
   - jekyll-feed
 
+# show posts with future dates
+future: true
+
 # Exclude from processing
 exclude:
   - Gemfile

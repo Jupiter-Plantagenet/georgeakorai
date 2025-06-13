@@ -11,15 +11,28 @@ public_folder: "/images/uploads" # Path used in generated content (e.g., in mark
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "_posts" # Or your preferred folder for blog markdown files
+    folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post" } # Assuming a layout for posts
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "George Akor" } # Default to your name
+      - { label: "Author", name: "author", widget: "string", default: "George Akor" }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true }
       - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "GitHub URL", name: "github_url", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }

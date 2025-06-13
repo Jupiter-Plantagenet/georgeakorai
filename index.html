@@ -107,61 +107,29 @@ description: "The personal portfolio and blog for George Akor, a Software Engine
             <button class="filter-btn" data-filter="sc">Smart Contracts</button>
         </div>
         <div class="portfolio-grid">
-            <!-- Project 1 -->
-            <div class="portfolio-item" data-category="web">
+            {% for project in site.projects %}
+            <div class="portfolio-item" data-category="{{ project.category | default: 'web' }}">
                 <div class="portfolio-image">
-                    <img src="https://picsum.photos/seed/project1/400/300" alt="Project 1">
+                    <img src="{{ project.image | relative_url }}" alt="{{ project.title }} Thumbnail">
                 </div>
                 <div class="portfolio-overlay">
-                    <h3>Project Title 1</h3>
-                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
                     <div class="portfolio-links">
-                        <a href="#" class="portfolio-link" title="Live Demo">
+                        {% if project.demo_url %}
+                        <a href="{{ project.demo_url }}" class="portfolio-link" title="Live Demo" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Demo
                         </a>
-                        <a href="#" class="portfolio-link" title="GitHub">
+                        {% endif %}
+                        {% if project.github_url %}
+                        <a href="{{ project.github_url }}" class="portfolio-link" title="GitHub" target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="portfolio-item" data-category="ml">
-                <div class="portfolio-image">
-                    <img src="https://picsum.photos/seed/project2/400/300" alt="Project 2">
-                </div>
-                <div class="portfolio-overlay">
-                    <h3>Project Title 2</h3>
-                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
-                    <div class="portfolio-links">
-                        <a href="#" class="portfolio-link" title="Live Demo">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                        <a href="#" class="portfolio-link" title="GitHub">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="portfolio-item" data-category="sc">
-                <div class="portfolio-image">
-                    <img src="https://picsum.photos/seed/project3/400/300" alt="Project 3">
-                </div>
-                <div class="portfolio-overlay">
-                    <h3>Project Title 3</h3>
-                    <p>A brief description of the project goes here. Explain the tech stack and its purpose.</p>
-                    <div class="portfolio-links">
-                        <a href="#" class="portfolio-link" title="Live Demo">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
-                        <a href="#" class="portfolio-link" title="GitHub">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more portfolio items as needed -->
+            {% endfor %}
         </div>
     </div>
 </section>

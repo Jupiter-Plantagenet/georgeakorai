@@ -129,44 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Contact Form ---
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            const statusDiv = document.getElementById('form-status');
-if (statusDiv) statusDiv.textContent = '';
-
-const formData = new FormData(this);
-const xhr = new XMLHttpRequest();
-xhr.open(this.method, this.action);
-xhr.setRequestHeader('Accept', 'application/json');
-submitBtn.disabled = true;
-
-xhr.onreadystatechange = () => {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-    if (xhr.status === 200) {
-        if (statusDiv) {
-            statusDiv.textContent = 'Thanks! I will get back to you shortly.';
-            statusDiv.style.color = '#38a169'; // green
-        }
-        this.reset();
-    } else {
-        if (statusDiv) {
-            statusDiv.textContent = 'Ouch! my apologies, there seems to be some issue. Please try my email address or linkedin and I will get back to you shortly.';
-            statusDiv.style.color = '#e53e3e'; // red
-        }
-    }
-};
-xhr.send(formData);
-        });
-    }
+    // Note: Contact form handling is implemented in the inline script in index.html
+    // No duplicate handlers needed here
 
     // --- Scroll Animations ---
     const observerOptions = {
